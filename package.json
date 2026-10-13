@@ -1,0 +1,14 @@
+{
+  "name": "pictionary-game",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run dev --prefix frontend\"",
+    "test:multiplayer": "node test_multiplayer.cjs"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
